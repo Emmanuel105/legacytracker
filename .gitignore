@@ -187,6 +187,12 @@ Thumbs.db
 *.log
 logs/
 
+# Docker
+.env.docker.local
+.env.prod
+docker-compose.override.yml
+backup.sql
+
 # Testing
 .coverage
 htmlcov/

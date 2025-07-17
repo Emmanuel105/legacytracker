@@ -27,6 +27,21 @@ A Django-based school attendance and home visit management system designed for m
 ## 🔧 Common Development Commands
 
 ### Initial Setup
+
+#### Option 1: Docker (Recommended)
+```bash
+# Start with PostgreSQL and Metabase
+docker-compose --profile metabase up --build
+
+# Run migrations and create superuser
+docker-compose exec web python manage.py migrate
+docker-compose exec web python manage.py createsuperuser
+
+# Access application at http://localhost:8000
+# Access Metabase at http://localhost:3000
+```
+
+#### Option 2: Virtual Environment
 ```bash
 # Virtual environment
 python3 -m venv venv
@@ -35,7 +50,7 @@ source venv/bin/activate  # Windows: venv\Scripts\activate
 # Install dependencies
 pip install -r requirements.txt
 
-# Database setup
+# Database setup (requires PostgreSQL)
 python manage.py migrate
 python manage.py makemigrations
 
@@ -47,6 +62,22 @@ python manage.py runserver
 ```
 
 ### Testing
+
+#### With Docker
+```bash
+# Run all tests
+docker-compose exec web python manage.py test
+
+# Run specific app tests
+docker-compose exec web python manage.py test schools
+docker-compose exec web python manage.py test students
+docker-compose exec web python manage.py test attendance
+
+# Run with verbose output
+docker-compose exec web python manage.py test --verbosity=2
+```
+
+#### Without Docker
 ```bash
 # Run all tests
 python manage.py test
@@ -207,7 +238,7 @@ HomeVisit
 
 VisitReport
 ├── visit: OneToOne to HomeVisit
-├── conducted_date: DateTimeField
+├── conducted_date: DateTimeDateTime
 ├── outcome: CharField
 ├── notes: TextField
 ├── photos: ImageField
@@ -356,3 +387,8 @@ python manage.py migrate
 - **Caching layer**: Redis for session management
 - **CDN integration**: Static file delivery
 - **API versioning**: Backward compatibility
+
+## 🧠 Claude's Memories
+
+### Development Notes
+- Write this to memory and lets take a brake

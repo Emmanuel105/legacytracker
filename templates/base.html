@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token }}">
+    <title>{% block title %}Legacy Academy Tracking System{% endblock title %}</title>
+    
+    <!-- Favicon -->
+    {% load static %}
+    <link rel="icon" type="image/jpeg" href="{% static 'images/favicon.jpg' %}">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .main-content {
+            flex: 1;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+        .navbar {
+            background-color: #ffffff;
+            border-bottom: 1px solid #dee2e6;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+        }
+        .navbar-brand {
+            font-weight: 600;
+            color: #5a9e6f; /* Legacy Academy green */
+            display: flex;
+            align-items: center;
+        }
+        .navbar-brand img {
+            margin-right: 0.5rem;
+        }
+        .navbar-nav {
+            align-items: center;
+        }
+        .navbar-nav .nav-item {
+            display: flex;
+            align-items: center;
+        }
+        .navbar-nav .nav-link {
+            padding: 0.5rem 1rem;
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            transition: background-color 0.2s ease;
+            border-radius: 0.25rem;
+        }
+        .navbar-nav .nav-link:hover {
+            background-color: rgba(90, 158, 111, 0.1);
+        }
+        .navbar-nav .nav-link.active {
+            background-color: rgba(90, 158, 111, 0.15);
+            color: #5a9e6f;
+        }
+        .navbar-nav .nav-link i {
+            font-size: 1.1rem;
+            margin-right: 0.5rem;
+        }
+        .navbar-nav .dropdown-menu {
+            border: none;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+            margin-top: 0.5rem;
+        }
+        .navbar-nav .dropdown-item {
+            padding: 0.5rem 1.5rem;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.2s ease;
+        }
+        .navbar-nav .dropdown-item:hover {
+            background-color: rgba(90, 158, 111, 0.1);
+        }
+        .navbar-nav .dropdown-item i {
+            width: 1.5rem;
+            margin-right: 0.5rem;
+        }
+        .footer {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 1rem 0;
+            margin-top: auto;
+        }
+        .card {
+            border: none;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+        }
+        .card-header {
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #dee2e6;
+            font-weight: 600;
+        }
+        .btn-primary {
+            background-color: #5a9e6f;
+            border-color: #5a9e6f;
+        }
+        .btn-primary:hover {
+            background-color: #4a8c5f;
+            border-color: #4a8c5f;
+        }
+        .text-primary {
+            color: #5a9e6f !important;
+        }
+        .alert-info {
+            background-color: rgba(90, 158, 111, 0.1);
+            border-color: rgba(90, 158, 111, 0.2);
+            color: #5a9e6f;
+        }
+        @media (max-width: 991px) {
+            .navbar-nav {
+                margin-top: 1rem;
+            }
+            .navbar-nav .nav-link {
+                padding: 0.75rem 1rem;
+            }
+        }
+    </style>
+    
+    {% block extra_css %}{% endblock extra_css %}
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'dashboard' %}">
+                <img src="{% static 'images/legacy-logo.png' %}" alt="Legacy Academy" height="40" onerror="this.style.display='none'">
+                Legacy Academy Tracking
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                {% if user.is_authenticated %}
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'dashboard' %}">
+                            <i class="bi bi-house-door"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'student_list' %}">
+                            <i class="bi bi-people"></i>
+                            Students
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'attendance_dashboard' %}">
+                            <i class="bi bi-check-square"></i>
+                            Attendance
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'visits_dashboard' %}">
+                            <i class="bi bi-geo-alt"></i>
+                            Home Visits
+                        </a>
+                    </li>
+                    {% if user.role in 'SUPER_ADMIN,SCHOOL_ADMIN' %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="reportsDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-graph-up"></i>
+                            Reports
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-bar-chart"></i>Analytics</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-file-earmark-text"></i>Attendance Reports</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-file-earmark-spreadsheet"></i>Visit Reports</a></li>
+                        </ul>
+                    </li>
+                    {% endif %}
+                    {% if user.role in 'SUPER_ADMIN,SCHOOL_ADMIN' %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="adminDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-gear"></i>
+                            Settings
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'school_profile' %}"><i class="bi bi-building"></i>School Profile</a></li>
+                            <li><a class="dropdown-item" href="{% url 'manage_zones' %}"><i class="bi bi-map"></i>Manage Zones</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="/{{ settings.ADMIN_URL }}"><i class="bi bi-shield-lock"></i>Admin Panel</a></li>
+                        </ul>
+                    </li>
+                    {% endif %}
+                </ul>
+                
+                <ul class="navbar-nav">
+                    {% if user.school %}
+                    <li class="nav-item">
+                        <span class="navbar-text me-3">
+                            <i class="bi bi-building"></i>
+                            {{ user.school.name }}
+                        </span>
+                    </li>
+                    {% endif %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-person-circle"></i>
+                            {{ user.get_full_name|default:user.username }}
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i>Profile</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-key"></i>Change Password</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="{% url 'logout' %}"><i class="bi bi-box-arrow-right"></i>Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Messages -->
+            {% if messages %}
+            <div class="row">
+                <div class="col-12">
+                    {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+            
+            <!-- Page Content -->
+            {% block content %}{% endblock content %}
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2024 Legacy Academy Tracking System. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">
+                        <small>
+                            {% if user.is_authenticated %}
+                            Logged in as {{ user.get_role_display_short }} | 
+                            {% endif %}
+                            Version 1.0
+                        </small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script>
+        // CSRF token for AJAX requests
+        const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]')?.value || 
+                         document.querySelector('meta[name="csrf-token"]')?.getAttribute('content');
+        
+        // Set active navigation item
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPath = window.location.pathname;
+            const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+            
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPath) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // Auto-hide alerts after 5 seconds
+        setTimeout(function() {
+            const alerts = document.querySelectorAll('.alert');
+            alerts.forEach(alert => {
+                if (alert.classList.contains('show')) {
+                    alert.classList.remove('show');
+                    setTimeout(() => alert.remove(), 300);
+                }
+            });
+        }, 5000);
+    </script>
+    
+    {% block extra_js %}{% endblock extra_js %}
+</body>
+</html>

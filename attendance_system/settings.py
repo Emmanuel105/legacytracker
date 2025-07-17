@@ -55,11 +55,11 @@ INSTALLED_APPS = [
     'corsheaders',
     
     # Local apps
-    'schools',
-    'students',
-    'attendance',
-    'visits',
-    'reports',
+    'schools.apps.SchoolsConfig',
+    'students.apps.StudentsConfig',
+    'attendance.apps.AttendanceConfig',
+    'visits.apps.VisitsConfig',
+    'reports.apps.ReportsConfig',
 ]
 
 MIDDLEWARE = [
