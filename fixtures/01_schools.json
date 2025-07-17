@@ -1,0 +1,62 @@
+[
+  {
+    "model": "schools.school",
+    "pk": 1,
+    "fields": {
+      "name": "Legacy Academy Bauleni",
+      "code": "LAB",
+      "address": "Plot 123, Bauleni Compound, Lusaka",
+      "phone_number": "+260971234567",
+      "email": "bauleni@legacyacademy.zm",
+      "contact_person": "Mrs. Sarah Mwanza",
+      "latitude": "-15.4067",
+      "longitude": "28.3850",
+      "school_start_time": "07:30:00",
+      "school_end_time": "14:30:00",
+      "attendance_cutoff_time": "08:00:00",
+      "created_at": "2025-01-01T08:00:00Z",
+      "updated_at": "2025-01-01T08:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "schools.school",
+    "pk": 2,
+    "fields": {
+      "name": "Legacy Academy Chawama",
+      "code": "LAC",
+      "address": "Plot 456, Chawama Compound, Lusaka",
+      "phone_number": "+260971234568",
+      "email": "chawama@legacyacademy.zm",
+      "contact_person": "Mr. John Banda",
+      "latitude": "-15.4500",
+      "longitude": "28.3200",
+      "school_start_time": "07:30:00",
+      "school_end_time": "14:30:00",
+      "attendance_cutoff_time": "08:00:00",
+      "created_at": "2025-01-01T08:00:00Z",
+      "updated_at": "2025-01-01T08:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "schools.school",
+    "pk": 3,
+    "fields": {
+      "name": "Legacy Academy Mtendere",
+      "code": "LAM",
+      "address": "Plot 789, Mtendere Compound, Lusaka",
+      "phone_number": "+260971234569",
+      "email": "mtendere@legacyacademy.zm",
+      "contact_person": "Mrs. Grace Phiri",
+      "latitude": "-15.3900",
+      "longitude": "28.4100",
+      "school_start_time": "07:30:00",
+      "school_end_time": "14:30:00",
+      "attendance_cutoff_time": "08:00:00",
+      "created_at": "2025-01-01T08:00:00Z",
+      "updated_at": "2025-01-01T08:00:00Z",
+      "is_active": true
+    }
+  }
+]

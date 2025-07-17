@@ -1,0 +1,206 @@
+[
+  {
+    "model": "students.guardian",
+    "pk": 1,
+    "fields": {
+      "first_name": "Maria",
+      "last_name": "Banda",
+      "relationship": "MOTHER",
+      "phone_number": "+260971111001",
+      "alternative_phone": "",
+      "email": "",
+      "address": "House 123, Section 2, Bauleni Compound",
+      "receive_sms": true,
+      "preferred_language": "EN",
+      "created_at": "2025-01-01T10:00:00Z",
+      "updated_at": "2025-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "students.guardian",
+    "pk": 2,
+    "fields": {
+      "first_name": "Joseph",
+      "last_name": "Banda",
+      "relationship": "FATHER",
+      "phone_number": "+260971111002",
+      "alternative_phone": "",
+      "email": "",
+      "address": "House 123, Section 2, Bauleni Compound",
+      "receive_sms": true,
+      "preferred_language": "EN",
+      "created_at": "2025-01-01T10:00:00Z",
+      "updated_at": "2025-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "students.guardian",
+    "pk": 3,
+    "fields": {
+      "first_name": "Joyce",
+      "last_name": "Mwanza",
+      "relationship": "MOTHER",
+      "phone_number": "+260971111003",
+      "alternative_phone": "+260961111003",
+      "email": "joyce.mwanza@gmail.com",
+      "address": "House 456, Section 3, Bauleni Compound",
+      "receive_sms": true,
+      "preferred_language": "NY",
+      "created_at": "2025-01-01T10:00:00Z",
+      "updated_at": "2025-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "students.guardian",
+    "pk": 4,
+    "fields": {
+      "first_name": "Agnes",
+      "last_name": "Tembo",
+      "relationship": "GRANDMOTHER",
+      "phone_number": "+260971111004",
+      "alternative_phone": "",
+      "email": "",
+      "address": "House 789, Section 1, Bauleni Compound",
+      "receive_sms": true,
+      "preferred_language": "BE",
+      "created_at": "2025-01-01T10:00:00Z",
+      "updated_at": "2025-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "students.guardian",
+    "pk": 5,
+    "fields": {
+      "first_name": "Grace",
+      "last_name": "Phiri",
+      "relationship": "MOTHER",
+      "phone_number": "+260971111005",
+      "alternative_phone": "",
+      "email": "",
+      "address": "House 234, Section 1, Chawama Compound",
+      "receive_sms": true,
+      "preferred_language": "EN",
+      "created_at": "2025-01-01T10:00:00Z",
+      "updated_at": "2025-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "students.guardian",
+    "pk": 6,
+    "fields": {
+      "first_name": "Patrick",
+      "last_name": "Phiri",
+      "relationship": "FATHER",
+      "phone_number": "+260971111006",
+      "alternative_phone": "",
+      "email": "",
+      "address": "House 234, Section 1, Chawama Compound",
+      "receive_sms": false,
+      "preferred_language": "EN",
+      "created_at": "2025-01-01T10:00:00Z",
+      "updated_at": "2025-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "students.guardian",
+    "pk": 7,
+    "fields": {
+      "first_name": "Ruth",
+      "last_name": "Sakala",
+      "relationship": "AUNT",
+      "phone_number": "+260971111007",
+      "alternative_phone": "",
+      "email": "",
+      "address": "House 567, Section 2, Chawama Compound",
+      "receive_sms": true,
+      "preferred_language": "NY",
+      "created_at": "2025-01-01T10:00:00Z",
+      "updated_at": "2025-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "students.guardian",
+    "pk": 8,
+    "fields": {
+      "first_name": "Elizabeth",
+      "last_name": "Zulu",
+      "relationship": "MOTHER",
+      "phone_number": "+260971111008",
+      "alternative_phone": "+260961111008",
+      "email": "liz.zulu@yahoo.com",
+      "address": "House 890, Section 3, Chawama Compound",
+      "receive_sms": true,
+      "preferred_language": "EN",
+      "created_at": "2025-01-01T10:00:00Z",
+      "updated_at": "2025-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "students.guardian",
+    "pk": 9,
+    "fields": {
+      "first_name": "Margaret",
+      "last_name": "Chanda",
+      "relationship": "MOTHER",
+      "phone_number": "+260971111009",
+      "alternative_phone": "",
+      "email": "",
+      "address": "House 345, Section 1, Mtendere Compound",
+      "receive_sms": true,
+      "preferred_language": "BE",
+      "created_at": "2025-01-01T10:00:00Z",
+      "updated_at": "2025-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "students.guardian",
+    "pk": 10,
+    "fields": {
+      "first_name": "Daniel",
+      "last_name": "Chanda",
+      "relationship": "FATHER",
+      "phone_number": "+260971111010",
+      "alternative_phone": "",
+      "email": "",
+      "address": "House 345, Section 1, Mtendere Compound",
+      "receive_sms": true,
+      "preferred_language": "BE",
+      "created_at": "2025-01-01T10:00:00Z",
+      "updated_at": "2025-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "students.guardian",
+    "pk": 11,
+    "fields": {
+      "first_name": "Jane",
+      "last_name": "Mulenga",
+      "relationship": "GUARDIAN",
+      "phone_number": "+260971111011",
+      "alternative_phone": "",
+      "email": "",
+      "address": "House 678, Section 2, Mtendere Compound",
+      "receive_sms": true,
+      "preferred_language": "NY",
+      "created_at": "2025-01-01T10:00:00Z",
+      "updated_at": "2025-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "students.guardian",
+    "pk": 12,
+    "fields": {
+      "first_name": "Susan",
+      "last_name": "Kasonde",
+      "relationship": "MOTHER",
+      "phone_number": "+260971111012",
+      "alternative_phone": "",
+      "email": "",
+      "address": "House 901, Section 3, Mtendere Compound",
+      "receive_sms": true,
+      "preferred_language": "EN",
+      "created_at": "2025-01-01T10:00:00Z",
+      "updated_at": "2025-01-01T10:00:00Z"
+    }
+  }
+]

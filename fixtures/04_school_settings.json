@@ -1,0 +1,50 @@
+[
+  {
+    "model": "schools.schoolsettings",
+    "pk": 1,
+    "fields": {
+      "school": 1,
+      "absence_threshold_days": 2,
+      "absence_monitoring_period": 7,
+      "auto_generate_visits": true,
+      "visit_priority_threshold": 3,
+      "notify_parents_sms": true,
+      "notify_admin_email": true,
+      "daily_report_time": "16:00:00",
+      "term_start_date": "2025-01-13",
+      "term_end_date": "2025-04-11"
+    }
+  },
+  {
+    "model": "schools.schoolsettings",
+    "pk": 2,
+    "fields": {
+      "school": 2,
+      "absence_threshold_days": 2,
+      "absence_monitoring_period": 7,
+      "auto_generate_visits": true,
+      "visit_priority_threshold": 3,
+      "notify_parents_sms": true,
+      "notify_admin_email": true,
+      "daily_report_time": "16:00:00",
+      "term_start_date": "2025-01-13",
+      "term_end_date": "2025-04-11"
+    }
+  },
+  {
+    "model": "schools.schoolsettings",
+    "pk": 3,
+    "fields": {
+      "school": 3,
+      "absence_threshold_days": 2,
+      "absence_monitoring_period": 7,
+      "auto_generate_visits": true,
+      "visit_priority_threshold": 3,
+      "notify_parents_sms": false,
+      "notify_admin_email": true,
+      "daily_report_time": "16:00:00",
+      "term_start_date": "2025-01-13",
+      "term_end_date": "2025-04-11"
+    }
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "model": "schools.user_assigned_zones",
+    "fields": {
+      "user": 7,
+      "zone": 1
+    }
+  },
+  {
+    "model": "schools.user_assigned_zones",
+    "fields": {
+      "user": 7,
+      "zone": 2
+    }
+  },
+  {
+    "model": "schools.user_assigned_zones",
+    "fields": {
+      "user": 9,
+      "zone": 3
+    }
+  },
+  {
+    "model": "schools.user_assigned_zones",
+    "fields": {
+      "user": 9,
+      "zone": 4
+    }
+  },
+  {
+    "model": "schools.user_assigned_zones",
+    "fields": {
+      "user": 11,
+      "zone": 5
+    }
+  },
+  {
+    "model": "schools.user_assigned_zones",
+    "fields": {
+      "user": 11,
+      "zone": 6
+    }
+  }
+]

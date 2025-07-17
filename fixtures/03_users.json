@@ -1,0 +1,222 @@
+[
+  {
+    "model": "schools.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$DuGGorCJ0REmzDc2EPxbsG$k6fuFiDBOsnq3O4dsK/WOzsYe4etUShzbEzVUowIv30=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "admin_bauleni",
+      "first_name": "Sarah",
+      "last_name": "Mwanza",
+      "email": "sarah.mwanza@legacyacademy.zm",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2025-01-01T08:00:00Z",
+      "role": "SCHOOL_ADMIN",
+      "school": 1,
+      "employee_number": "LAB001",
+      "phone_number": "+260971234567",
+      "last_login_ip": null,
+      "is_password_changed": false
+    }
+  },
+  {
+    "model": "schools.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$DuGGorCJ0REmzDc2EPxbsG$k6fuFiDBOsnq3O4dsK/WOzsYe4etUShzbEzVUowIv30=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "admin_chawama",
+      "first_name": "John",
+      "last_name": "Banda",
+      "email": "john.banda@legacyacademy.zm",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2025-01-01T08:00:00Z",
+      "role": "SCHOOL_ADMIN",
+      "school": 2,
+      "employee_number": "LAC001",
+      "phone_number": "+260971234568",
+      "last_login_ip": null,
+      "is_password_changed": false
+    }
+  },
+  {
+    "model": "schools.user",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$DuGGorCJ0REmzDc2EPxbsG$k6fuFiDBOsnq3O4dsK/WOzsYe4etUShzbEzVUowIv30=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "admin_mtendere",
+      "first_name": "Grace",
+      "last_name": "Phiri",
+      "email": "grace.phiri@legacyacademy.zm",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2025-01-01T08:00:00Z",
+      "role": "SCHOOL_ADMIN",
+      "school": 3,
+      "employee_number": "LAM001",
+      "phone_number": "+260971234569",
+      "last_login_ip": null,
+      "is_password_changed": false
+    }
+  },
+  {
+    "model": "schools.user",
+    "pk": 5,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$DuGGorCJ0REmzDc2EPxbsG$k6fuFiDBOsnq3O4dsK/WOzsYe4etUShzbEzVUowIv30=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "teacher_bauleni_1",
+      "first_name": "Mary",
+      "last_name": "Tembo",
+      "email": "mary.tembo@legacyacademy.zm",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-01-02T08:00:00Z",
+      "role": "TEACHER",
+      "school": 1,
+      "employee_number": "LAB002",
+      "phone_number": "+260971234570",
+      "last_login_ip": null,
+      "is_password_changed": false
+    }
+  },
+  {
+    "model": "schools.user",
+    "pk": 6,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$DuGGorCJ0REmzDc2EPxbsG$k6fuFiDBOsnq3O4dsK/WOzsYe4etUShzbEzVUowIv30=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "teacher_bauleni_2",
+      "first_name": "James",
+      "last_name": "Sakala",
+      "email": "james.sakala@legacyacademy.zm",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-01-02T08:00:00Z",
+      "role": "TEACHER",
+      "school": 1,
+      "employee_number": "LAB003",
+      "phone_number": "+260971234571",
+      "last_login_ip": null,
+      "is_password_changed": false
+    }
+  },
+  {
+    "model": "schools.user",
+    "pk": 7,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$DuGGorCJ0REmzDc2EPxbsG$k6fuFiDBOsnq3O4dsK/WOzsYe4etUShzbEzVUowIv30=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "field_officer_bauleni",
+      "first_name": "Peter",
+      "last_name": "Mwale",
+      "email": "peter.mwale@legacyacademy.zm",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-01-03T08:00:00Z",
+      "role": "FIELD_OFFICER",
+      "school": 1,
+      "employee_number": "LAB004",
+      "phone_number": "+260971234572",
+      "last_login_ip": null,
+      "is_password_changed": false
+    }
+  },
+  {
+    "model": "schools.user",
+    "pk": 8,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$DuGGorCJ0REmzDc2EPxbsG$k6fuFiDBOsnq3O4dsK/WOzsYe4etUShzbEzVUowIv30=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "teacher_chawama_1",
+      "first_name": "Alice",
+      "last_name": "Mulenga",
+      "email": "alice.mulenga@legacyacademy.zm",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-01-02T08:00:00Z",
+      "role": "TEACHER",
+      "school": 2,
+      "employee_number": "LAC002",
+      "phone_number": "+260971234573",
+      "last_login_ip": null,
+      "is_password_changed": false
+    }
+  },
+  {
+    "model": "schools.user",
+    "pk": 9,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$DuGGorCJ0REmzDc2EPxbsG$k6fuFiDBOsnq3O4dsK/WOzsYe4etUShzbEzVUowIv30=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "field_officer_chawama",
+      "first_name": "Moses",
+      "last_name": "Zulu",
+      "email": "moses.zulu@legacyacademy.zm",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-01-03T08:00:00Z",
+      "role": "FIELD_OFFICER",
+      "school": 2,
+      "employee_number": "LAC003",
+      "phone_number": "+260971234574",
+      "last_login_ip": null,
+      "is_password_changed": false
+    }
+  },
+  {
+    "model": "schools.user",
+    "pk": 10,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$DuGGorCJ0REmzDc2EPxbsG$k6fuFiDBOsnq3O4dsK/WOzsYe4etUShzbEzVUowIv30=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "teacher_mtendere_1",
+      "first_name": "Rebecca",
+      "last_name": "Chanda",
+      "email": "rebecca.chanda@legacyacademy.zm",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-01-02T08:00:00Z",
+      "role": "TEACHER",
+      "school": 3,
+      "employee_number": "LAM002",
+      "phone_number": "+260971234575",
+      "last_login_ip": null,
+      "is_password_changed": false
+    }
+  },
+  {
+    "model": "schools.user",
+    "pk": 11,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$DuGGorCJ0REmzDc2EPxbsG$k6fuFiDBOsnq3O4dsK/WOzsYe4etUShzbEzVUowIv30=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "field_officer_mtendere",
+      "first_name": "David",
+      "last_name": "Kasonde",
+      "email": "david.kasonde@legacyacademy.zm",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-01-03T08:00:00Z",
+      "role": "FIELD_OFFICER",
+      "school": 3,
+      "employee_number": "LAM003",
+      "phone_number": "+260971234576",
+      "last_login_ip": null,
+      "is_password_changed": false
+    }
+  }
+]

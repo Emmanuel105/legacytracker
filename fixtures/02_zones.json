@@ -1,0 +1,122 @@
+[
+  {
+    "model": "schools.zone",
+    "pk": 1,
+    "fields": {
+      "name": "Zone A - North Bauleni",
+      "school": 1,
+      "description": "Northern section of Bauleni compound including sections 1-5",
+      "boundary_coordinates": {
+        "type": "polygon",
+        "coordinates": [
+          [-15.400, 28.380],
+          [-15.405, 28.380],
+          [-15.405, 28.390],
+          [-15.400, 28.390],
+          [-15.400, 28.380]
+        ]
+      },
+      "created_at": "2025-01-01T09:00:00Z"
+    }
+  },
+  {
+    "model": "schools.zone",
+    "pk": 2,
+    "fields": {
+      "name": "Zone B - South Bauleni",
+      "school": 1,
+      "description": "Southern section of Bauleni compound including sections 6-10",
+      "boundary_coordinates": {
+        "type": "polygon",
+        "coordinates": [
+          [-15.405, 28.380],
+          [-15.410, 28.380],
+          [-15.410, 28.390],
+          [-15.405, 28.390],
+          [-15.405, 28.380]
+        ]
+      },
+      "created_at": "2025-01-01T09:00:00Z"
+    }
+  },
+  {
+    "model": "schools.zone",
+    "pk": 3,
+    "fields": {
+      "name": "Zone A - East Chawama",
+      "school": 2,
+      "description": "Eastern section of Chawama compound",
+      "boundary_coordinates": {
+        "type": "polygon",
+        "coordinates": [
+          [-15.445, 28.315],
+          [-15.450, 28.315],
+          [-15.450, 28.325],
+          [-15.445, 28.325],
+          [-15.445, 28.315]
+        ]
+      },
+      "created_at": "2025-01-01T09:00:00Z"
+    }
+  },
+  {
+    "model": "schools.zone",
+    "pk": 4,
+    "fields": {
+      "name": "Zone B - West Chawama",
+      "school": 2,
+      "description": "Western section of Chawama compound",
+      "boundary_coordinates": {
+        "type": "polygon",
+        "coordinates": [
+          [-15.450, 28.315],
+          [-15.455, 28.315],
+          [-15.455, 28.325],
+          [-15.450, 28.325],
+          [-15.450, 28.315]
+        ]
+      },
+      "created_at": "2025-01-01T09:00:00Z"
+    }
+  },
+  {
+    "model": "schools.zone",
+    "pk": 5,
+    "fields": {
+      "name": "Zone A - Central Mtendere",
+      "school": 3,
+      "description": "Central section of Mtendere compound",
+      "boundary_coordinates": {
+        "type": "polygon",
+        "coordinates": [
+          [-15.385, 28.405],
+          [-15.390, 28.405],
+          [-15.390, 28.415],
+          [-15.385, 28.415],
+          [-15.385, 28.405]
+        ]
+      },
+      "created_at": "2025-01-01T09:00:00Z"
+    }
+  },
+  {
+    "model": "schools.zone",
+    "pk": 6,
+    "fields": {
+      "name": "Zone B - Outer Mtendere",
+      "school": 3,
+      "description": "Outer sections of Mtendere compound",
+      "boundary_coordinates": {
+        "type": "polygon",
+        "coordinates": [
+          [-15.390, 28.405],
+          [-15.395, 28.405],
+          [-15.395, 28.415],
+          [-15.390, 28.415],
+          [-15.390, 28.405]
+        ]
+      },
+      "created_at": "2025-01-01T09:00:00Z"
+    }
+  }
+]
