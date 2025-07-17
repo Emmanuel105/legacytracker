@@ -9,6 +9,15 @@ from django.views.decorators.http import require_http_methods
 from .models import School, User, Zone
 
 
+def index(request):
+    """
+    Landing page - redirect to dashboard if authenticated, otherwise login.
+    """
+    if request.user.is_authenticated:
+        return redirect('dashboard')
+    return redirect('login')
+
+
 def login_view(request):
     """
     Custom login view supporting both username/email and employee number.
