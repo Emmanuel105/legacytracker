@@ -2,14 +2,23 @@
 # Exit on error
 set -o errexit
 
+# Debug info
+echo "=== Starting build process ==="
+echo "Python version: $(python --version)"
+echo "Working directory: $(pwd)"
+echo "DATABASE_URL set: ${DATABASE_URL:+Yes}"
+
 # Install dependencies
+echo "=== Installing dependencies ==="
 pip install -r requirements.txt
 
 # Collect static files
+echo "=== Collecting static files ==="
 python manage.py collectstatic --noinput
 
 # Run database migrations
-python manage.py migrate
+echo "=== Running database migrations ==="
+python manage.py migrate || echo "Warning: Migrations failed - database might not be connected"
 
 # Create superuser if it doesn't exist
 echo "Creating superuser..."

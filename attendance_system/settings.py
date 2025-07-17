@@ -32,7 +32,7 @@ allowed_hosts_config = config('ALLOWED_HOSTS', default='localhost,127.0.0.1')
 ALLOWED_HOSTS = [host.strip() for host in allowed_hosts_config.split(',')]
 
 # Add Render domain patterns if not already specified
-render_patterns = ['.onrender.com', '*.onrender.com']
+render_patterns = ['.onrender.com', '*.onrender.com', 'legacy-academy-tracking.onrender.com', 'legacytracker.onrender.com']
 for pattern in render_patterns:
     if pattern not in ALLOWED_HOSTS:
         ALLOWED_HOSTS.append(pattern)
