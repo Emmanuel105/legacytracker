@@ -4,9 +4,12 @@ set -o errexit
 
 # Debug info
 echo "=== Starting build process ==="
+echo "Build timestamp: $(date)"
 echo "Python version: $(python --version)"
 echo "Working directory: $(pwd)"
 echo "DATABASE_URL set: ${DATABASE_URL:+Yes}"
+echo "RENDER environment: ${RENDER:-Not set}"
+echo "Branch: ${RENDER_GIT_BRANCH:-Unknown}"
 
 # Install dependencies
 echo "=== Installing dependencies ==="
@@ -14,7 +17,12 @@ pip install -r requirements.txt
 
 # Collect static files
 echo "=== Collecting static files ==="
-python manage.py collectstatic --noinput
+python manage.py collectstatic --noinput || {
+    echo "ERROR: collectstatic failed"
+    echo "Checking static directory..."
+    ls -la static/ || echo "No static directory found"
+    exit 1
+}
 
 # Run database migrations
 echo "=== Running database migrations ==="
