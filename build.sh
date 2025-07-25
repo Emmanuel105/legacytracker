@@ -4,6 +4,7 @@ set -o errexit
 
 # Debug info
 echo "=== Starting build process ==="
+echo "Build timestamp: $(date)"
 echo "Python version: $(python --version)"
 echo "Working directory: $(pwd)"
 echo "DATABASE_URL set: ${DATABASE_URL:+Yes}"
